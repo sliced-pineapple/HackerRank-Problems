@@ -5,38 +5,28 @@ using namespace std;
 
 int main()
 {
-    int n; cin >> n;
+    int a;
+    cin >> a;
 
-    int arr[n][n];
-
-    int lf = 0;
-    int rf = 0;
-
-    int li = 0, rj = n - 1;
-    for (int i = 0; i < n; i++)
+    float p = 0, n = 0, z = 0;
+    for (int i = 0; i < a; i++)
     {
-        for (int j = 0; j < n; j++)
+        int temp; cin >> temp;
+
+        if (temp > 0)
         {
-            cin >> arr[i][j];
-
-            if (i == j)
-            {
-                lf += arr[i][j];
-            }
-
-            if (i == li && j == rj)
-            {
-                rf += arr[i][j];
-            }
-            
-            
+            p++;
         }
-
-        li++;
-        rj --;
-        
+        else if (temp == 0)
+        {
+            z++;
+        }
+        else
+        {
+            n++;
+        }
     }
 
-    cout << abs(lf- rf) << endl;
+    printf("%.6f\n%.6f\n%.6f", (p / a), (n / a), (z / a));
     
 }
