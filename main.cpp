@@ -5,17 +5,38 @@ using namespace std;
 
 int main()
 {
-    int a;
-     cin >> a;
+    int n; cin >> n;
 
-    long sum = 0;
+    int arr[n][n];
 
-    for (int i = 0; i < a; i++)
+    int lf = 0;
+    int rf = 0;
+
+    int li = 0, rj = n - 1;
+    for (int i = 0; i < n; i++)
     {
-        unsigned int temp; cin >> temp;
-        sum += temp;
+        for (int j = 0; j < n; j++)
+        {
+            cin >> arr[i][j];
+
+            if (i == j)
+            {
+                lf += arr[i][j];
+            }
+
+            if (i == li && j == rj)
+            {
+                rf += arr[i][j];
+            }
+            
+            
+        }
+
+        li++;
+        rj --;
+        
     }
 
-    cout << sum << endl;
+    cout << abs(lf- rf) << endl;
     
 }
