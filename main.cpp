@@ -5,15 +5,34 @@ using namespace std;
 
 int main()
 {
-    int n; cin >> n;
-
-    int count  = 0;
-    for (int i = 0; i < n; i++)
+    int a[3];
+    for (int i = 0; i < 3; i++)
     {
-        int temp; cin >> temp;
-        count += temp;
+        cin >> a[i];
     }
-    
 
-    cout << count << endl;
+    int b[3];
+    for (int i = 0; i < 3; i++)
+    {
+        cin >> b[i];
+    }
+
+    int k = 0, l = 0;
+    for (int i = 0; i < 3; i++)
+    {
+        if (a[i] > b[i])
+        {
+            k++;
+        }
+        else if (a[i] == b[i])
+        {
+            
+        }
+        else{
+            l++;
+        }
+    }
+
+    cout << k << " " << l << endl;
+    
 }
