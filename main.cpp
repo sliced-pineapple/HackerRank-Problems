@@ -5,34 +5,17 @@ using namespace std;
 
 int main()
 {
-    int a[3];
-    for (int i = 0; i < 3; i++)
+    int a;
+     cin >> a;
+
+    long sum = 0;
+
+    for (int i = 0; i < a; i++)
     {
-        cin >> a[i];
+        unsigned int temp; cin >> temp;
+        sum += temp;
     }
 
-    int b[3];
-    for (int i = 0; i < 3; i++)
-    {
-        cin >> b[i];
-    }
-
-    int k = 0, l = 0;
-    for (int i = 0; i < 3; i++)
-    {
-        if (a[i] > b[i])
-        {
-            k++;
-        }
-        else if (a[i] == b[i])
-        {
-            
-        }
-        else{
-            l++;
-        }
-    }
-
-    cout << k << " " << l << endl;
+    cout << sum << endl;
     
 }
