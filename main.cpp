@@ -1,28 +1,32 @@
-#include <iostream>
+#include <bits/stdc++.h>
 
 using namespace std;
 
 
 int main()
 {
-    int n; cin >> n;
+   unsigned int arr[5];
 
-    for (int i = 1; i <= n; i++)
-    {
-        int s = n - i;
+  for (int i = 0; i < 5; i++)
+  {
+     cin >> arr[i];
+  }
 
-        for (int j = 0; j < s; j++)
-        {
-            cout << " ";
-        }
+  sort(arr, arr + 5);
 
-        for (int k = 0; k < i; k++)
-        {
-            cout << "#";
-        }
+    unsigned int min = 0;
+  for (int i = 0; i < 4; i++)
+  {
+      min += arr[i];
+  }
 
-        cout << endl;
-        
-    }
-    
+  unsigned int max = 0;
+  for (int i = 4; i > 0; i--)
+  {
+      max += arr[i];
+  }
+  
+
+  cout << min << " " << max << endl;
+  
 }
