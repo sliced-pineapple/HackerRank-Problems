@@ -5,28 +5,24 @@ using namespace std;
 
 int main()
 {
-    int a;
-    cin >> a;
+    int n; cin >> n;
 
-    float p = 0, n = 0, z = 0;
-    for (int i = 0; i < a; i++)
+    for (int i = 1; i <= n; i++)
     {
-        int temp; cin >> temp;
+        int s = n - i;
 
-        if (temp > 0)
+        for (int j = 0; j < s; j++)
         {
-            p++;
+            cout << " ";
         }
-        else if (temp == 0)
+
+        for (int k = 0; k < i; k++)
         {
-            z++;
+            cout << "#";
         }
-        else
-        {
-            n++;
-        }
+
+        cout << endl;
+        
     }
-
-    printf("%.6f\n%.6f\n%.6f", (p / a), (n / a), (z / a));
     
 }
