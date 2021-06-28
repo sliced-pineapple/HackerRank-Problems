@@ -5,28 +5,27 @@ using namespace std;
 
 int main()
 {
-   unsigned int arr[5];
+  int n;
+  cin >> n;
 
-  for (int i = 0; i < 5; i++)
+  unsigned int arr[n];
+  for (int i = 0; i < n; i++)
   {
-     cin >> arr[i];
-  }
-
-  sort(arr, arr + 5);
-
-    unsigned int min = 0;
-  for (int i = 0; i < 4; i++)
-  {
-      min += arr[i];
-  }
-
-  unsigned int max = 0;
-  for (int i = 4; i > 0; i--)
-  {
-      max += arr[i];
+      cin >> arr[i];
   }
   
+  sort(arr, arr + n);
 
-  cout << min << " " << max << endl;
+  unsigned int max = arr[n - 1];
+  int count = 0;
+  for (int i = 0; i < n; i++)
+  {
+      if (arr[i] == max)
+      {
+          count++;
+      }
+      
+  }
   
+  cout << count << endl;
 }
